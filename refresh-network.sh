@@ -1,15 +1,21 @@
 #!/bin/bash
 
-sudo su
+################################################
+#                                              #
+#  This will delete existing network settings  #
+#      Last-ditch macos troubleshooting        #
+#                                              #
+################################################
+
 
 cd /Library/Preferences/SystemConfiguration/
 
 echo "resetting preferences"
-rm com.apple.airport.preferences.plist
-rm com.apple.network.identification.plist
-rm com.apple.wifi.message-tracer.plist
-rm NetworkInterfaces.plist
-rm preferences.plist
+sudo rm com.apple.airport.preferences.plist
+sudo rm com.apple.network.identification.plist
+sudo rm com.apple.wifi.message-tracer.plist
+sudo rm NetworkInterfaces.plist
+sudo rm preferences.plist
 
 echo "restarting"
-reboot
+sudo reboot
